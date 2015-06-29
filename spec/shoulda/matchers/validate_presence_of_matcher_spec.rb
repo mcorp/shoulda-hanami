@@ -22,7 +22,7 @@ RSpec.describe Shoulda::Lotus::Matchers::ValidatePresenceOfMatcher do
   context 'an attribute without validation' do
     let(:model) { WithoutValidationModel.new }
 
-    it 'rejects' do
+    it 'does not validate' do
       expect(model).to_not validate_presence_of(:email)
     end
 

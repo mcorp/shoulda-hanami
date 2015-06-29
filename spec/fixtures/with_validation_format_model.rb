@@ -1,4 +1,4 @@
-class Person
+class WithValidationFormatModel
   include Lotus::Validations
 
   attribute :email, format: /@/
