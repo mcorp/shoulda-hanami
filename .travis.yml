@@ -15,3 +15,5 @@ rvm:
   - jruby-head
   - ruby-head
 before_install: gem install bundler -v 1.10.5
+env:
+  - TRAVIS=true
