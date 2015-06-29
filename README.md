@@ -20,7 +20,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Entity
+
+```ruby
+class Person
+  include Lotus::Validations
+
+  attribute :email, format: /@/
+end
+```
+
+### Spec
+```ruby
+it { is_expected.to allow_value("leo@nospam.org").for(:email) }
+it { is_expected.to_not allow_value('leo-at-nospam.org').for(:email) }
+```
 
 ## Development
 
