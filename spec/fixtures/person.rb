@@ -1,5 +1,3 @@
-require 'lotus/validations'
-
 class Person
   include Lotus::Validations
 
