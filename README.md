@@ -28,14 +28,23 @@ class Person
   include Lotus::Validations
 
   attribute :email, presence: true, format: /@/
+  attribute :name, size: 5..50
+  attribute :password, size: 10
 end
 ```
 
 ### Spec
 ```ruby
+# allow_value
 it { is_expected.to allow_value("leo@nospam.org").for(:email) }
 it { is_expected.to_not allow_value('leo-at-nospam.org').for(:email) }
-it { is_expected.to validate_presence_of(:name) }
+
+# presence
+it { is_expected.to validate_presence_of(:email) }
+
+# size
+it { is_expected.to validate_length(:name).is_at_least(5).is_at_most(50) }
+it { is_expected.to validate_length(:password).is_equal_to(10) }
 ```
 
 ## Contributing
