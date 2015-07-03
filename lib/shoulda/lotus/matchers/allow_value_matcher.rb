@@ -11,11 +11,8 @@ module Shoulda
         end
 
         def matches?(target)
-          @target = target
-          @target.send("#{@attribute}=", @value)
-          @target.valid?
-
-          !(@target.errors.for(@attribute).select { |error| error.attribute == @attribute.to_s && error.validation == :format }.size > 0)
+          target.send("#{@attribute}=", @value)
+          !Matcher.new(target, @attribute, :format).matches?
         end
 
         def description

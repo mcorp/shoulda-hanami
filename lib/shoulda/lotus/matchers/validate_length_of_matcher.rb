@@ -13,15 +13,11 @@ module Shoulda
         def matches?(target)
           errors = []
 
-          @target = target
+          target.send("#{@attribute}=", '*' * (minimum - 1))
+          errors << Matcher.new(target, @attribute, :size).matches?
 
-          @target.send("#{@attribute}=", '*' * (minimum - 1))
-          @target.valid?
-          errors << (@target.errors.for(@attribute).select { |error| error.attribute == @attribute.to_s && error.validation == :size }.size > 0)
-
-          @target.send("#{@attribute}=", '*' * (maximum + 1))
-          @target.valid?
-          errors << (@target.errors.for(@attribute).select { |error| error.attribute == @attribute.to_s && error.validation == :size }.size > 0)
+          target.send("#{@attribute}=", '*' * (maximum + 1))
+          errors << Matcher.new(target, @attribute, :size).matches?
 
           errors.all? { |error| error }
         end
