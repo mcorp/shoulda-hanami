@@ -11,10 +11,7 @@ module Shoulda
         end
 
         def matches?(target)
-          @target = target
-          @target.valid?
-
-          @target.errors.for(@attribute).select { |error| error.attribute == @attribute.to_s && error.validation == :presence }.size > 0
+          Matcher.new(target, @attribute, :presence).matches?
         end
 
         def description

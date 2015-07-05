@@ -27,9 +27,11 @@ Or install it yourself as:
 class Person
   include Lotus::Validations
 
-  attribute :email, presence: true, format: /@/
-  attribute :name, size: 5..50
-  attribute :password, size: 10
+  attribute :email,      type: String, presence: true, format: /@/
+  attribute :name,       type: String, size: 5..50
+  attribute :password,   type: String, size: 10
+  attribute :birthday,   type: Date
+  attribute :created_at, type: DateTime
 end
 ```
 
@@ -45,6 +47,13 @@ it { is_expected.to validate_presence_of(:email) }
 # size
 it { is_expected.to validate_length(:name).is_at_least(5).is_at_most(50) }
 it { is_expected.to validate_length(:password).is_equal_to(10) }
+
+# coerces
+it { is_expected.to coerce_attribute(:email).to(String) }
+it { is_expected.to coerce_attribute(:name).to(String) }
+it { is_expected.to coerce_attribute(:password).to(String) }
+it { is_expected.to coerce_attribute(:birthday).to(Date) }
+it { is_expected.to coerce_attribute(:created_at).to(DateTime) }
 ```
 
 ## Contributing
