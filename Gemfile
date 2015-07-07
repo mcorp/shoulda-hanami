@@ -7,3 +7,4 @@ gem 'codeclimate-test-reporter'
 
 # documentation
 gem 'inch'
+gem 'yard'
