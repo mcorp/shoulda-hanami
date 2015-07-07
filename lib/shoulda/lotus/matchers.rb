@@ -1,5 +1,6 @@
 require 'shoulda/lotus/matchers/coerce_attribute_matcher'
 require 'shoulda/lotus/matchers/allow_value_matcher'
+require 'shoulda/lotus/matchers/validate_inclusion_of_matcher'
 require 'shoulda/lotus/matchers/validate_length_of_matcher'
 require 'shoulda/lotus/matchers/validate_presence_of_matcher'
 
