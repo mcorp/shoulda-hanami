@@ -1,0 +1,7 @@
+--no-private
+--protected
+--readme README.md
+--files LICENSE.txt
+--markup markdown
+--hide-tag return
+--hide-tag param
