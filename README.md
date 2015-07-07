@@ -1,5 +1,5 @@
 # shoulda-lotus
-[![Gem Version](https://badge.fury.io/rb/shoulda-lotus.svg)](http://badge.fury.io/rb/shoulda-lotus) [![Build Status](https://travis-ci.org/mcorp/shoulda-lotus.svg?branch=master)](https://travis-ci.org/mcorp/shoulda-lotus) [![Code Climate](https://codeclimate.com/github/mcorp/shoulda-lotus/badges/gpa.svg)](https://codeclimate.com/github/mcorp/shoulda-lotus) [![Test Coverage](https://codeclimate.com/github/mcorp/shoulda-lotus/badges/coverage.svg)](https://codeclimate.com/github/mcorp/shoulda-lotus/coverage) [![Dependency Status](https://gemnasium.com/mcorp/shoulda-lotus.svg)](https://gemnasium.com/mcorp/shoulda-lotus)
+[![Gem Version](https://badge.fury.io/rb/shoulda-lotus.svg)](http://badge.fury.io/rb/shoulda-lotus) [![Build Status](https://travis-ci.org/mcorp/shoulda-lotus.svg?branch=master)](https://travis-ci.org/mcorp/shoulda-lotus) [![Code Climate](https://codeclimate.com/github/mcorp/shoulda-lotus/badges/gpa.svg)](https://codeclimate.com/github/mcorp/shoulda-lotus) [![Test Coverage](https://codeclimate.com/github/mcorp/shoulda-lotus/badges/coverage.svg)](https://codeclimate.com/github/mcorp/shoulda-lotus/coverage) [![Dependency Status](https://gemnasium.com/mcorp/shoulda-lotus.svg)](https://gemnasium.com/mcorp/shoulda-lotus)[![Inline docs](http://inch-ci.org/github/mcorp/shoulda-lotus.svg?branch=master)](http://inch-ci.org/github/mcorp/shoulda-lotus)
 
 Making tests easy on the fingers and eyes, but on lotus.
 
@@ -74,4 +74,3 @@ it { is_expected.to validate_inclusion_of(:year).in_array(1979..1990) }
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
