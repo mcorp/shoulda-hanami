@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'bundler', '~> 1.10'
-gem 'rake', '~> 10.0'
-gem 'rspec'
+gemspec
 gem 'codeclimate-test-reporter'
 
 # documentation
