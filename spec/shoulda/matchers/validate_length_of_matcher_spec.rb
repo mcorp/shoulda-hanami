@@ -4,9 +4,9 @@ RSpec.describe Shoulda::Lotus::Matchers::ValidateLengthOfMatcher do
   include Shoulda::Lotus::Matchers
 
   it '#description' do
-    matcher = validate_length_of(:bar).is_at_least(1).is_at_most(10)
+    matcher = validate_length_of(:bar).is_at_least(2).is_at_most(10)
 
-    expect(matcher.description).to eq "'bar' size between '1..10'"
+    expect(matcher.description).to eq "'bar' size between '2..10'"
   end
 
   context 'an attribute with a validation' do
@@ -17,7 +17,7 @@ RSpec.describe Shoulda::Lotus::Matchers::ValidateLengthOfMatcher do
     end
 
     it 'accepts an interval' do
-      expect(model).to validate_length_of(:name_between_1_10).is_at_least(1).is_at_most(10)
+      expect(model).to validate_length_of(:name_between_2_10).is_at_least(2).is_at_most(10)
     end
 
     it 'provides correct failure message'
