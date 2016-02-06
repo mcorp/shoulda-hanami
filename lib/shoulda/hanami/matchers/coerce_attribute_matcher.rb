@@ -1,5 +1,5 @@
 module Shoulda
-  module Lotus
+  module Hanami
     module Matchers
       def coerce_attribute(attribute)
         CoerceAttributeMatcher.new(attribute)

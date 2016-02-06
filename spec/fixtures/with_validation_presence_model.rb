@@ -1,5 +1,5 @@
 class WithValidationPresenceModel
-  include Lotus::Validations
+  include Hanami::Validations
 
   attribute :email, presence: true
 end

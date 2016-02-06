@@ -1,5 +1,5 @@
 class WithValidationTypeModel
-  include Lotus::Validations
+  include Hanami::Validations
 
   attribute :attr_array,      type: Array
   attribute :attr_bigdecimal, type: BigDecimal

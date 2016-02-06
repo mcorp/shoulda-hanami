@@ -1,5 +1,5 @@
 class WithoutValidationModel
-  include Lotus::Validations
+  include Hanami::Validations
 
   attribute :email
 end

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-RSpec.describe Shoulda::Lotus::Matchers::ValidateInclusionOfMatcher do
-  include Shoulda::Lotus::Matchers
+RSpec.describe Shoulda::Hanami::Matchers::ValidateInclusionOfMatcher do
+  include Shoulda::Hanami::Matchers
 
   it '#description' do
     matcher = validate_inclusion_of(:bar).in_array(%i(beer whisky))

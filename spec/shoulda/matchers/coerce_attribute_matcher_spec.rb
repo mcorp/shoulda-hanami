@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-RSpec.describe Shoulda::Lotus::Matchers::CoerceAttributeMatcher do
-  include Shoulda::Lotus::Matchers
+RSpec.describe Shoulda::Hanami::Matchers::CoerceAttributeMatcher do
+  include Shoulda::Hanami::Matchers
 
   it '#description' do
     matcher = coerce_attribute(:attr_string).to(String)

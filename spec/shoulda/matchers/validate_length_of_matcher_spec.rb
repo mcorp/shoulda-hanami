@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-RSpec.describe Shoulda::Lotus::Matchers::ValidateLengthOfMatcher do
-  include Shoulda::Lotus::Matchers
+RSpec.describe Shoulda::Hanami::Matchers::ValidateLengthOfMatcher do
+  include Shoulda::Hanami::Matchers
 
   it '#description' do
     matcher = validate_length_of(:bar).is_at_least(2).is_at_most(10)

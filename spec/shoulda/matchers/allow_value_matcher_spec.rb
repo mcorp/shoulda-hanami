@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-RSpec.describe Shoulda::Lotus::Matchers::AllowValueMatcher do
-  include Shoulda::Lotus::Matchers
+RSpec.describe Shoulda::Hanami::Matchers::AllowValueMatcher do
+  include Shoulda::Hanami::Matchers
 
   it '#description' do
     matcher = allow_value('beer').for(:bar)

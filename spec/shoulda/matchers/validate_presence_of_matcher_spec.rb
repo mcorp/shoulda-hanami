@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-RSpec.describe Shoulda::Lotus::Matchers::ValidatePresenceOfMatcher do
-  include Shoulda::Lotus::Matchers
+RSpec.describe Shoulda::Hanami::Matchers::ValidatePresenceOfMatcher do
+  include Shoulda::Hanami::Matchers
 
   it '#description' do
     matcher = validate_presence_of(:bar)

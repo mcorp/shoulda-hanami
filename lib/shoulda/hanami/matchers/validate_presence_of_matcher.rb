@@ -1,5 +1,5 @@
 module Shoulda
-  module Lotus
+  module Hanami
     module Matchers
       def validate_presence_of(attribute)
         ValidatePresenceOfMatcher.new(attribute)

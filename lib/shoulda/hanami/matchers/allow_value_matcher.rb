@@ -1,5 +1,5 @@
 module Shoulda
-  module Lotus
+  module Hanami
     module Matchers
       def allow_value(value)
         AllowValueMatcher.new(value)

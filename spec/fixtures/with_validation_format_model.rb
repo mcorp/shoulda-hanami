@@ -1,5 +1,5 @@
 class WithValidationFormatModel
-  include Lotus::Validations
+  include Hanami::Validations
 
   attribute :email, format: /@/
 end

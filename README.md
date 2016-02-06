@@ -1,14 +1,14 @@
-# shoulda-lotus
-[![Gem Version](https://badge.fury.io/rb/shoulda-lotus.svg)](http://badge.fury.io/rb/shoulda-lotus) [![Build Status](https://travis-ci.org/mcorp/shoulda-lotus.svg?branch=master)](https://travis-ci.org/mcorp/shoulda-lotus) [![Code Climate](https://codeclimate.com/github/mcorp/shoulda-lotus/badges/gpa.svg)](https://codeclimate.com/github/mcorp/shoulda-lotus) [![Test Coverage](https://codeclimate.com/github/mcorp/shoulda-lotus/badges/coverage.svg)](https://codeclimate.com/github/mcorp/shoulda-lotus/coverage) [![Dependency Status](https://gemnasium.com/mcorp/shoulda-lotus.svg)](https://gemnasium.com/mcorp/shoulda-lotus) [![Inline docs](http://inch-ci.org/github/mcorp/shoulda-lotus.svg?branch=master)](http://inch-ci.org/github/mcorp/shoulda-lotus)
+# shoulda-hanami
+[![Gem Version](https://badge.fury.io/rb/shoulda-hanami.svg)](http://badge.fury.io/rb/shoulda-hanami) [![Build Status](https://travis-ci.org/mcorp/shoulda-hanami.svg?branch=master)](https://travis-ci.org/mcorp/shoulda-hanami) [![Code Climate](https://codeclimate.com/github/mcorp/shoulda-hanami/badges/gpa.svg)](https://codeclimate.com/github/mcorp/shoulda-hanami) [![Test Coverage](https://codeclimate.com/github/mcorp/shoulda-hanami/badges/coverage.svg)](https://codeclimate.com/github/mcorp/shoulda-hanami/coverage) [![Dependency Status](https://gemnasium.com/mcorp/shoulda-hanami.svg)](https://gemnasium.com/mcorp/shoulda-hanami) [![Inline docs](http://inch-ci.org/github/mcorp/shoulda-hanami.svg?branch=master)](http://inch-ci.org/github/mcorp/shoulda-hanami)
 
-Making tests easy on the fingers and eyes, but on lotus.
+Making tests easy on the fingers and eyes, but on hanami.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'shoulda-lotus'
+gem 'shoulda-hanami'
 ```
 
 And then execute:
@@ -17,7 +17,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install shoulda-lotus
+    $ gem install shoulda-hanami
 
 ## Usage
 
@@ -25,7 +25,7 @@ Or install it yourself as:
 
 ```ruby
 class Person
-  include Lotus::Validations
+  include Hanami::Validations
 
   attribute :email,      type: String, presence: true, format: /@/
   attribute :name,       type: String, size: 5..50

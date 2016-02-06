@@ -1,5 +1,5 @@
 class WithValidationInclusionModel
-  include Lotus::Validations
+  include Hanami::Validations
 
   attribute :state, inclusion: %w(PR SC SP)
 end
