@@ -18,6 +18,17 @@ And then execute:
 Or install it yourself as:
 
     $ gem install shoulda-hanami
+    
+## Configure
+
+Create file `spec/support/shoulda_hanami.rb` with:
+
+```ruby
+RSpec.configure do |config|
+  config.include Shoulda::Hanami::Matchers
+end
+
+```
 
 ## Usage
 
