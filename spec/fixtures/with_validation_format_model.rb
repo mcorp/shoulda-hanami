@@ -1,5 +1,7 @@
 class WithValidationFormatModel
   include Hanami::Validations
 
-  attribute :email, format: /@/
+  validations do
+    optional(:email) { format?(/@/) }
+  end
 end

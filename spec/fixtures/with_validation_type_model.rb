@@ -1,17 +1,19 @@
 class WithValidationTypeModel
   include Hanami::Validations
 
-  attribute :attr_array,      type: Array
-  attribute :attr_bigdecimal, type: BigDecimal
-  attribute :attr_boolean,    type: Boolean
-  attribute :attr_date,       type: Date
-  attribute :attr_datetime,   type: DateTime
-  attribute :attr_float,      type: Float
-  attribute :attr_hash,       type: Hash
-  attribute :attr_integer,    type: Integer
-  attribute :attr_pathname,   type: Pathname
-  attribute :attr_set,        type: Set
-  attribute :attr_string,     type: String
-  attribute :attr_symbol,     type: Symbol
-  attribute :attr_time,       type: Time
+  validations do
+    optional(:attr_array) { array? }
+    optional(:attr_bigdecimal) { decimal? }
+    optional(:attr_boolean) { bool? }
+    optional(:attr_date) { date? }
+    optional(:attr_datetime).filled(type?: DateTime)
+    optional(:attr_float) { float? }
+    optional(:attr_hash) { hash? }
+    optional(:attr_integer) { int? }
+    optional(:attr_pathname).filled(type?: Pathname)
+    optional(:attr_set).filled(type?: Set)
+    optional(:attr_string) { str? }
+    optional(:attr_symbol).filled(type?: Symbol)
+    optional(:attr_time) { time? }
+  end
 end

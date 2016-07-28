@@ -13,11 +13,9 @@ module Shoulda
         def matches?(target)
           errors = []
 
-          target.send("#{@attribute}=", '*' * (minimum - 1))
-          errors << Matcher.new(target, @attribute, :size).matches?
+          errors << Matcher.new(target.class.new(@attribute => '*' * (minimum - 1)), @attribute, :size).matches?
 
-          target.send("#{@attribute}=", '*' * (maximum + 1))
-          errors << Matcher.new(target, @attribute, :size).matches?
+          errors << Matcher.new(target.class.new(@attribute => '*' * (maximum + 1)), @attribute, :size).matches?
 
           errors.all? { |error| error }
         end

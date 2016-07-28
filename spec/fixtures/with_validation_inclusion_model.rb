@@ -1,5 +1,7 @@
 class WithValidationInclusionModel
   include Hanami::Validations
 
-  attribute :state, inclusion: %w(PR SC SP)
+  validations do
+    optional(:state).filled(inclusion?: %w(PR SC SP))
+  end
 end

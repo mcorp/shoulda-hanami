@@ -1,5 +1,7 @@
 class WithValidationPresenceModel
   include Hanami::Validations
 
-  attribute :email, presence: true
+  validations do
+    required(:email).filled
+  end
 end
