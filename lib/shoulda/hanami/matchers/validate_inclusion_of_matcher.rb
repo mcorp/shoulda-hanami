@@ -18,8 +18,7 @@ module Shoulda
             break unless @values.include? value
           end
 
-          target.send("#{@attribute}=", value)
-          Matcher.new(target, @attribute, :inclusion).matches?
+          Matcher.new(target.class.new(@attribute => value), @attribute, :inclusion).matches?
         end
 
         def description

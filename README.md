@@ -18,7 +18,7 @@ And then execute:
 Or install it yourself as:
 
     $ gem install shoulda-hanami
-    
+
 ## Configure
 
 Create file `spec/support/shoulda_hanami.rb` with:
@@ -38,17 +38,18 @@ end
 class Person
   include Hanami::Validations
 
-  attribute :email,      type: String, presence: true, format: /@/
-  attribute :name,       type: String, size: 5..50
-  attribute :password,   type: String, size: 10
-  attribute :birthday,   type: Date
-  attribute :created_at, type: DateTime
-  attribute :state,      type: String,  inclusion: %w(PR SC SP)
-  attribute :year,       type: Integer, inclusion: 1979..1990
+  validations do
+    required(:email)    { format?(/@/) }
+    required(:name)     { size?(5..50) }
+    required(:password) { size?(10) }
+    required(:state)    { included_in?(%w(PR SC SP)) }
+    required(:year)     { included_in?(1979..1990) }
+  end
 end
 ```
 
 ### Spec
+
 ```ruby
 # allow_value
 it { is_expected.to allow_value("leo@nospam.org").for(:email) }
@@ -60,13 +61,6 @@ it { is_expected.to validate_presence_of(:email) }
 # size
 it { is_expected.to validate_length_of(:name).is_at_least(5).is_at_most(50) }
 it { is_expected.to validate_length_of(:password).is_equal_to(10) }
-
-# coerces
-it { is_expected.to coerce_attribute(:email).to(String) }
-it { is_expected.to coerce_attribute(:name).to(String) }
-it { is_expected.to coerce_attribute(:password).to(String) }
-it { is_expected.to coerce_attribute(:birthday).to(Date) }
-it { is_expected.to coerce_attribute(:created_at).to(DateTime) }
 
 # inclusion
 it { is_expected.to validate_inclusion_of(:state).in_array(%w(PR SC SP)) }

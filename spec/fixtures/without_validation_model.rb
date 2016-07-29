@@ -1,5 +1,7 @@
 class WithoutValidationModel
   include Hanami::Validations
 
-  attribute :email
+  validations do
+    optional(:email)
+  end
 end

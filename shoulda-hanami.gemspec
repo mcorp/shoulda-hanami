@@ -22,5 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.4.0'
 
-  spec.add_dependency 'hanami-validations', '~> 0.5.0'
+  spec.add_dependency 'hanami-validations', '~> 0.6.0'
 end

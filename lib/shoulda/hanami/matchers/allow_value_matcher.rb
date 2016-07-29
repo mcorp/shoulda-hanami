@@ -11,8 +11,7 @@ module Shoulda
         end
 
         def matches?(target)
-          target.send("#{@attribute}=", @value)
-          !Matcher.new(target, @attribute, :format).matches?
+          !Matcher.new(target.class.new(@attribute => @value), @attribute, :format).matches?
         end
 
         def description

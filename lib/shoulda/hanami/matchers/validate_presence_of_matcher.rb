@@ -11,7 +11,7 @@ module Shoulda
         end
 
         def matches?(target)
-          Matcher.new(target, @attribute, :presence).matches?
+          Matcher.new(target.class.new(@attribute => nil), @attribute, :presence).matches?
         end
 
         def description
